@@ -180,6 +180,8 @@ FC_MSP_SERIALPORT=/dev/ttyUSB0
 FC_MSP_BAUDRATE=115200
 #
 #
+# FORCE YOUR AirPi to think it has a camera attached. LEAVE COMMENTED ON GROUNDPI
+CAM=1
 #
 # GROUNDPI settings
 # ============================================================
