@@ -133,4 +133,4 @@ sudo chmod 775 /home/pi/wifibroadcast-rc-Ath9k/rctxUDP.sh
 sudo chmod 775 /home/pi/wifibroadcast-rc-Ath9k/rctxUDP_IN
 
 sudo chmod 775 /home/pi/wifibroadcast-rc/rctxUDP.sh
-sudo chmod 775 /home/pi/wifibroadcast-rc-Ath9k/rctxUDP_IN
+sudo chmod 775 /home/pi/wifibroadcast-rc/rctxUDP_IN
