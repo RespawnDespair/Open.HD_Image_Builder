@@ -4,32 +4,32 @@
 on_chroot << EOF
 
 # Install OpenVG and flir stuff
-cd /home/pi
+#cd /home/pi
 sudo mkdir /home/pi/flir
-sudo mv v4l2loopback /home/pi/flir
+#sudo mv v4l2loopback /home/pi/flir
 
-cd flir
-cd v4l2loopback
+#cd flir
+#cd v4l2loopback
 
 # for V6 architecture
-echo "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX MAKING V4l2loopback XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-echo "THE KERNEL VERSION=$KERNEL_VERSION"
-sudo KERNEL_VERSION=${KERNEL_VERSION%+*}
-echo "THE NEW MODIFIED KERNEL VERSION=$KERNEL_VERSION"
-sudo make KERNELRELEASE=$KERNEL_VERSION
-sudo make KERNELRELEASE=$KERNEL_VERSION install
-sudo depmod -a -w $KERNEL_VERSION
+#echo "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX MAKING V4l2loopback XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+#echo "THE KERNEL VERSION=$KERNEL_VERSION"
+#sudo KERNEL_VERSION=${KERNEL_VERSION%+*}
+#echo "THE NEW MODIFIED KERNEL VERSION=$KERNEL_VERSION"
+#sudo make KERNELRELEASE=$KERNEL_VERSION
+#sudo make KERNELRELEASE=$KERNEL_VERSION install
+#sudo depmod -a -w $KERNEL_VERSION
 
 # for V7 architecture
-sudo make KERNELRELEASE=$KERNEL_VERSION_V7
-sudo make KERNELRELEASE=$KERNEL_VERSION_V7 install
-sudo depmod -a -w $KERNEL_VERSION_V7
+#sudo make KERNELRELEASE=$KERNEL_VERSION_V7
+#sudo make KERNELRELEASE=$KERNEL_VERSION_V7 install
+#sudo depmod -a -w $KERNEL_VERSION_V7
 
-# move this to 00 script
-#cd /home/pi/flir
-#sudo git clone https://github.com/fnoop/flirone-v4l2.git
-#cd flirone-v4l2
-#sudo make
+## move this to 00 script
+##cd /home/pi/flir
+##sudo git clone https://github.com/fnoop/flirone-v4l2.git
+##cd flirone-v4l2
+##sudo make
 
 #Move Raspi2png to wifibroadcast-misc
 cd /home/pi
