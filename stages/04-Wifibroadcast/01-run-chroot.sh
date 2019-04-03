@@ -127,3 +127,10 @@ cd /home/pi/cameracontrol/IPCamera/svpcom_wifibroadcast
 chmod 755 version.py
 make
 ./wfb_keygen
+
+
+sudo chmod 775 /home/pi/wifibroadcast-rc-Ath9k/rctxUDP.sh
+sudo chmod 775 /home/pi/wifibroadcast-rc-Ath9k/rctxUDP_IN
+
+sudo chmod 775 /home/pi/wifibroadcast-rc/rctxUDP.sh
+sudo chmod 775 /home/pi/wifibroadcast-rc-Ath9k/rctxUDP_IN
