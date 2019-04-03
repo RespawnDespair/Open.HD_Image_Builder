@@ -41,8 +41,9 @@ DEBIAN_FRONTEND=noninteractive sudo apt-get -yq install gstreamer1.0-gl
 DEBIAN_FRONTEND=noninteractive sudo apt-get -yq install gstreamer1.0-gtk3 
 DEBIAN_FRONTEND=noninteractive sudo apt-get -yq install gstreamer1.0-qt5 
 DEBIAN_FRONTEND=noninteractive sudo apt-get -yq install gstreamer1.0-pulseaudio
-#DEBIAN_FRONTEND=noninteractive sudo apt-get -yq install gtk-doc-tools
+
 DEBIAN_FRONTEND=noninteractive sudo apt-get -yq install gstreamer1.0-omx-rpi-config
+DEBIAN_FRONTEND=noninteractive sudo apt-get -yq install v4l2loopback-dkms
 
 DEBIAN_FRONTEND=noninteractive sudo apt-get -yq install libtool
 DEBIAN_FRONTEND=noninteractive sudo apt-get -yq install autoconf
@@ -71,13 +72,6 @@ DEBIAN_FRONTEND=noninteractive sudo apt-get -yq purge wireless-regdb
 DEBIAN_FRONTEND=noninteractive sudo apt-get -yq purge wpasupplicant
 DEBIAN_FRONTEND=noninteractive sudo apt-get -yq purge crda
 DEBIAN_FRONTEND=noninteractive sudo apt-get -yq purge cron
-
-#Untested Packages for possible removal
-#DEBIAN_FRONTEND=noninteractive sudo apt-get -yq purge dbus
-#DEBIAN_FRONTEND=noninteractive sudo apt-get -yq purge dhcpcd5
-#DEBIAN_FRONTEND=noninteractive sudo apt-get -yq purge isc-dhcp-client
-#DEBIAN_FRONTEND=noninteractive sudo apt-get -yq purge isc-dhcp-common
-
 
 # Remove packages for space savings
 DEBIAN_FRONTEND=noninteractive sudo apt-get -yq purge apt-transport-https
