@@ -7,7 +7,7 @@ log "Remove previous Kernel"
 rm -r linux || true
 
 log "Download the NanoPi Kernel"
-git clone https://github.com/friendlyarm/linux.git -b sunxi-4.x.y --depth 1
+git clone https://github.com/friendlyarm/linux.git -b sunxi-4.14.y --depth 1
 
 #return 
 popd
