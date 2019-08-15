@@ -10,17 +10,16 @@ cat temp.img >> IMAGE.img
 #log "fdisk magic to enlarge the main partition"
 
 PARTED_OUT=$(parted -s IMAGE.img unit s print)
-ROOT_OFFSET=$(echo "$PARTED_OUT" | grep -e '^ 2'| xargs echo -n \
-    | cut -d" " -f 2 | tr -d s)
+ROOT_OFFSET=$(echo "$PARTED_OUT" | grep -e '^ 3'| xargs echo -n | cut -d" " -f 3 | tr -d s)
 
 echo "ROOT OFFSET: $ROOT_OFFSET"
 
 fdisk IMAGE.img <<EOF
 d
-2
+3
 n
 p
-2
+3
 ${ROOT_OFFSET}
 
 w

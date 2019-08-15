@@ -4,16 +4,13 @@
 
 #!/bin/bash
 
+# to prevent Pip errors
+unset LC_ALL
+export LC_ALL=C
+
 # disable dhcpcd service
 sudo systemctl stop dhcpcd.service
 sudo systemctl disable dhcpcd.service
-
-# Remove bad and unnecessary symlinks 
-rm /lib/modules/4.14.71*/build
-rm /lib/modules/4.14.71*/source
-
-# Install kernel-headers before apt-get update
-DEBIAN_FRONTEND=noninteractive sudo apt-get -yq install raspberrypi-kernel-headers
 
 # Latest package source
 # sudo rm -rf /var/lib/apt/lists/*

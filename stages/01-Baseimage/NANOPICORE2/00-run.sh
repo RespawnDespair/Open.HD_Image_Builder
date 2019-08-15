@@ -6,7 +6,7 @@ rm -f *.img
 rm -f *.zip
 
 log "Use image downloaded in prerequisite step"
-mv ~/nanopitools/H3/NanoPi-Duo2/official-ROMs/nanopi-duo2_sd_friendlycore-xenial_4.14_armhf_20190522.img.zip ./
+cp ~/nanopitools/H3/NanoPi-Duo2/official-ROMs/nanopi-duo2_sd_friendlycore-xenial_4.14_armhf_20190522.img.zip ./
 
 #log "Download NanoPi debian base Image"
 #../../scripts/gdown.pl https://drive.google.com/open?id=1O9JPd6wT1ICDutdq1Dk8140HdkUZv8Yf ./nanopi-neo-core2_sd_friendlycore-xenial_4.14_arm64_20181011.img.zip

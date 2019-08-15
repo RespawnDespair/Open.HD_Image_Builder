@@ -34,9 +34,9 @@ mount_image () {
 
 	# Resize to full size
 	LOOP_DEV="$(findmnt -nr -o source $MNT_DIR)"
-	if [ ${BUILDTARGET} = "RASPBERRYPI" ]; then
+	#if [ ${BUILDTARGET} = "RASPBERRYPI" ]; then
 		resize2fs -f "$LOOP_DEV"
-	fi
+	#fi
 
     # mount the BOOT partition
     mountpoint -q "${MNT_DIR}/boot" || mount "$IMG_FILE" -o loop,offset=${BOOT_OFFSET},rw,sizelimit=${BOOT_LENGTH} "${MNT_DIR}/boot"
